@@ -67,11 +67,11 @@ const Show = () => {
         <div className="row mb-3 mt-3">
             <div className="col-12 d-flex justify-content-center align-items-center  "> 
               
-              <img className="img-header" src="https://www.gstatic.com/devrel-devsite/prod/v17bab36d69ae03fcc913f41eaedd7c01378ceed3d66f27cd213f7054697e46ba/firebase/images/touchicon-180.png"></img>
+              <img className="img-header" src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Firebase_icon.svg" alt="Firebase-logo"></img>
 
               <h1 className="h1-header">+</h1>
 
-              <img className="img-header" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/React.svg/1200px-React.svg.png"></img>
+              <img className="img-header" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/React.svg/1200px-React.svg.png" alt="React-logo"></img>
 
             </div>
         </div>

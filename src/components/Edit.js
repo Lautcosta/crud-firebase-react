@@ -2,6 +2,8 @@ import { useEffect, useState } from "react"
 import { useNavigate, useParams } from "react-router-dom"
 import { getDoc, updateDoc, doc } from "firebase/firestore"
 import { db } from "../firebaseconfig/firebase"
+import { Link } from 'react-router-dom'
+
 
 const Edit = () => {
     const [ description, setDescription ] = useState('')
@@ -48,6 +50,7 @@ const Edit = () => {
                             onChange={ (e) => setDescription(e.target.value)} 
                             type="text"
                             className='form-control'
+                            required
                         />
                     </div>  
 
@@ -58,8 +61,13 @@ const Edit = () => {
                             onChange={ (e)=> setStock(e.target.value)} 
                             type="number"
                             className='form-control'
+                            min='0'
                         />                 
                     </div>  
+
+                    <Link to="/" className="btn btn-secondary ms-2">
+                        <i className="fa-solid fa-arrow-left"></i>
+                    </Link>
 
                     <button type='submit' className='btn app-button'>Update</button>
 

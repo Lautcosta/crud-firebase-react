@@ -2,6 +2,11 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { collection, addDoc } from 'firebase/firestore'
 import { db } from '../firebaseconfig/firebase'
+import { Link } from 'react-router-dom'
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
+
+const MySwal = withReactContent(Swal);
 
 const Create = () => {
   const [ description, setDescription ] = useState('')
@@ -12,9 +17,18 @@ const Create = () => {
 
   const store = async (e) => {
     e.preventDefault()
+
     await addDoc( productsCollection, { description: description, stock: stock } )
+
+    await MySwal.fire({
+      title: "Created",
+      text: "product successfully added",
+      icon: "success",
+      confirmButtonColor: "#FFD52E"
+    });
+
     navigate('/')
-    //console.log(e.target[0].value)
+    
   }
 
   return (
@@ -30,6 +44,7 @@ const Create = () => {
                             onChange={ (e) => setDescription(e.target.value)} 
                             type="text"
                             className='form-control'
+                            required
                         />
                     </div>  
                     <div className='mb-3'>
@@ -39,9 +54,17 @@ const Create = () => {
                             onChange={ (e)=> setStock(e.target.value)} 
                             type="number"
                             className='form-control'
+                            min='0'
                         />                 
                     </div>  
+
+                    <Link to="/" className="btn btn-secondary ms-2">
+                    <i className="fa-solid fa-arrow-left"></i>
+                    </Link>
+
                     <button type='submit' className='btn app-button'>Store</button>
+                    
+
                  </form>   
             </div>
         </div>
