@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+# Product Manager (CRUD) - React & Firebase
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Aplicación web para la gestión de productos e inventario. Este proyecto es un CRUD (Create, Read, Update, Delete) completo que demuestra la integración de un frontend en React con una base de datos NoSQL en la nube.
 
-## Available Scripts
+🚀 **Live Demo:** [Ver proyecto funcionando en Vercel](https://crud-firebase-react-five.vercel.app/)
 
-In the project directory, you can run:
+## 🛠️ Tecnologías Utilizadas
 
-### `npm start`
+* **Frontend:** React.js
+* **Enrutamiento:** React Router DOM (Navegación SPA)
+* **Base de Datos:** Firebase Cloud Firestore
+* **Estilos & UI:** Bootstrap, FontAwesome
+* **Feedback/Alertas:** SweetAlert2
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## ✨ Funcionalidades Principales
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* **Gestión de Inventario:** Listado en tiempo real de productos y su stock disponible.
+* **Validaciones de Frontend:** Prevención de envíos de formularios con campos vacíos o valores de stock negativos.
+* **Experiencia de Usuario (UX):** Alertas asíncronas para confirmar la creación, edición o eliminación de documentos. Navegación fluida y botones de retroceso entre las distintas vistas.
+* **Manejo de Estados:** Uso intensivo de Hooks (`useState`, `useEffect`) para controlar el renderizado y las peticiones a la base de datos.
 
-### `npm test`
+## 💻 Instalación y Uso Local
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Si querés clonar el repositorio y correrlo en tu entorno local, seguí estos pasos:
 
-### `npm run build`
+1. Cloná el proyecto:
+```bash
+git clone [https://github.com/Lautcosta/crud-firebase-react.git](https://github.com/Lautcosta/crud-firebase-react.git)
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Instalá las dependencias:
+```bash
+npm install
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. Creá un archivo de configuración para Firebase (vas a necesitar tus propias credenciales en `src/firebaseconfig/firebase.js`).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+4. Levantá el servidor de desarrollo:
+```bash
+npm start
+```
